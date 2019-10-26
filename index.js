@@ -4,7 +4,7 @@ const request = require('request');
 const autossh = require('autossh');
 const fs = require('fs');
 
-const port = fs.readFileSync('/boot/port', 'utf8').trim();
+const port = +fs.readFileSync('/boot/port', 'utf8').trim() || Math.floor(Math.random() * 950 + 40050);
 console.log('PORT: ', port);
 
 let postPublicKey_once = false;
