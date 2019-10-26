@@ -1,0 +1,14 @@
+# /etc/systemd/system/autossh.service
+
+[Unit]
+Description=AutoSSH
+
+[Service]
+ExecStart=/opt/autossh/index.js
+WorkingDirectory=/opt/autossh
+Restart=always
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
