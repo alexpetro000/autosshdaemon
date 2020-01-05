@@ -19,7 +19,7 @@ autossh({
     serverAliveCountMax: 2
 })
 .on('error', err => {
-    console.error('ERROR: ', err);
+    console.log('ERROR: ', err);
 
     if(!postPublicKey_once) {
         postPublicKey_once = true;
